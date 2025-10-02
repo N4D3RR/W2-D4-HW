@@ -155,6 +155,7 @@ console.log(cutString("senza la prima e l'ultima"))
 const giveMeRandom = function (n) {
   let listaCasuale = []
   for (let i = 0; i < n; i++) {
+    //mettendo i<= n mi dava come risultato l'n che avevo deciso +1
     listaCasuale.push(Math.floor(Math.random() * 11))
   }
   return listaCasuale
