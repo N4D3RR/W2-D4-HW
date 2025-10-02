@@ -33,24 +33,25 @@ console.log(crazySum(5, 5))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const crazyDiff = function (n1, n2 = 19) {
+const crazyDiff = function (n1) {
   if (n1 < 19) {
-    return Math.abs(n1 - n2)
+    return Math.abs(n1 - 19)
   }
   if (n1 > 19) {
-    return [Math.abs(n1 - n2), Math.abs(n1 - n2) * 3]
+    return [Math.abs(n1 - 19), Math.abs(n1 - 19) * 3]
   }
 }
-console.log(crazyDiff(30))
+console.log("guarda", crazyDiff(40))
 
 const crazyDiffAlt = function (n1) {
-  let diff = Math.abs(n1 - 19)
+  let differenza = Math.abs(n1 - 19)
   if (n1 > 19) {
-    return [diff, diff * 3]
+    return [differenza, differenza * 3]
   }
   return diff
 }
 console.log(crazyDiffAlt(22))
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
@@ -123,7 +124,7 @@ console.log(reverseString("nader"))
 
 const upperFirst = function (str) {
   let words = str.split(" ") //se non metto lo spazio " " mi divide la stringa in singoli caratteri
-  let upperWords = ""
+  let upperWords = " "
 
   for (let i = 0; i < words.length; i++) {
     let word = words[i]
@@ -153,10 +154,10 @@ console.log(cutString("senza la prima e l'ultima"))
 
 const giveMeRandom = function (n) {
   let listaCasuale = []
-  for (let i = 0; i <= n; i++) {
+  for (let i = 0; i < n; i++) {
     listaCasuale.push(Math.floor(Math.random() * 11))
   }
   return listaCasuale
 }
 
-console.log(giveMeRandom(4))
+console.log(giveMeRandom(5))
