@@ -121,6 +121,18 @@ console.log(reverseString("nader"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const upperFirst = function (str) {
+  let words = str.split(" ") //se non metto lo spazio " " mi divide la stringa in singoli caratteri
+  let upperWords = ""
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i]
+    upperWords += word.charAt(0).toUpperCase() + word.slice(1) + " "
+  }
+  return upperWords
+}
+console.log(upperFirst("ciao a tutti")) //escono tutti in maiuscolo, perchè? perchè non avevo messo lo spazio tra " " nella riga 125
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -128,8 +140,23 @@ console.log(reverseString("nader"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (str) {
+  return str.slice(1, -1)
+}
+console.log(cutString("senza la prima e l'ultima"))
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const giveMeRandom = function (n) {
+  let listaCasuale = []
+  for (let i = 0; i <= n; i++) {
+    listaCasuale.push(Math.floor(Math.random() * 11))
+  }
+  return listaCasuale
+}
+
+console.log(giveMeRandom(4))
